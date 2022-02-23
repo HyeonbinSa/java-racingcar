@@ -2,6 +2,7 @@ package racingcar.view;
 
 import java.util.List;
 import racingcar.domain.Car;
+import racingcar.domain.Cars;
 
 public class Output {
 
@@ -25,8 +26,8 @@ public class Output {
         System.out.println(PRINT_RESULT_MESSAGE);
     }
 
-    public void printPosition(List<Car> cars) {
-        for (Car car : cars) {
+    public void printPosition(Cars cars) {
+        for (Car car : cars.getCars()) {
             String position = makePositionString(car.getPosition());
             System.out.printf("%-5s : %s\n", car.getName(), position);
         }
